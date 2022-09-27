@@ -7,7 +7,7 @@
 <h1>Carregando</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary"><i class="fa fa-add"></i> Create New</a>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa fa-add"></i> Novo</a>
 </p>
 <table id="myTable" class="table">
     <thead>
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.Fim)
             </td>
             <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success" class="btn btn-primary"><i class="fa fa-search"></i> Details</a> | 
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-edit"></i> Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success" class="btn btn-primary"><i class="fa fa-search"></i> Detalhes</a> | 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i> Apagar</a>
             </td>
         </tr>
 }
@@ -47,8 +47,12 @@
 </table>
 @section Scripts{
         <script>
-            $(document).ready(function () {
-                $('#myTable').DataTable();
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
             });
+        });
         </script>
 }

@@ -1,10 +1,10 @@
 ﻿@model Exportacao.Models.Container
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Container</h4>
 <hr />
@@ -48,15 +48,16 @@
                 </select>
                 <span asp-validation-for="Categoria" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <button type="submit" value="Save" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Index"><i class="fa-solid fa-angle-left"></i> Voltar</a>
 </div>
 
 @section Scripts {

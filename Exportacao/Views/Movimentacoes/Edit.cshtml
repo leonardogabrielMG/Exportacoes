@@ -1,10 +1,10 @@
 ﻿@model Exportacao.Models.Movimentacao
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Movimentacao</h4>
 <hr />
@@ -28,7 +28,7 @@
                 <input asp-for="Fim" class="form-control" />
                 <span asp-validation-for="Fim" class="text-danger"></span>
             </div>
-            <p></p>
+            <br />
             <div class="form-group">
                 <button type="submit" value="Save" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
             </div>
@@ -37,8 +37,8 @@
 </div>
 
 <div>
-    <p></p>
-    <a asp-action="Index" class="btn btn-primary"><i class="fa fa-circle-left"></i> Back to List</a>
+    <br />
+    <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-angle-left"></i> Voltar</a>
 </div>
 
 @section Scripts {
